@@ -7,7 +7,13 @@ import { Component } from '@angular/core';
   <h2>{{hero}} details!`,
 })
 export class AppComponent {
-  name = 'Guang';
-  title = 'Heroes list';
-  hero = 'Windstorm';
+  name:string;
+  title:string;
+  hero:string;
+  
+  constructor(){
+    this.name = 'Leon';
+    this.title = 'Tour of Heroes';
+    this.hero = 'Windstorm';
+  }
 }
