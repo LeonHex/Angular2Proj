@@ -8,14 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   name: string;
   title: string;
-  hero: Hero;
+  selectedHero: Hero;
   heroes: Array<Hero>;
 
 
   constructor() {
     this.name = 'Leon';
     this.title = 'Tour of Heroes';
-    this.hero = new Hero(1, 'Windstorm');
     this.heroes = [
       { id: 11, name: 'Mr. Nice' },
       { id: 12, name: 'Narco' },
@@ -28,6 +27,10 @@ export class AppComponent {
       { id: 19, name: 'Magma' },
       { id: 20, name: 'Tornado' }
     ];
+  }
+
+  onSelect(hero: Hero) {
+    this.selectedHero = hero;
   }
 }
 

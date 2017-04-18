@@ -13,7 +13,6 @@ var AppComponent = (function () {
     function AppComponent() {
         this.name = 'Leon';
         this.title = 'Tour of Heroes';
-        this.hero = new Hero(1, 'Windstorm');
         this.heroes = [
             { id: 11, name: 'Mr. Nice' },
             { id: 12, name: 'Narco' },
@@ -27,6 +26,9 @@ var AppComponent = (function () {
             { id: 20, name: 'Tornado' }
         ];
     }
+    AppComponent.prototype.onSelect = function (hero) {
+        this.selectedHero = hero;
+    };
     return AppComponent;
 }());
 AppComponent = __decorate([
