@@ -14,13 +14,14 @@ var AppComponent = (function () {
         this.name = 'Leon';
         this.title = 'Tour of Heroes';
         this.hero = 'Windstorm';
+        this.heroes = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
     }
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "\n  <h1>{{title}}</h1>\n  <h2>{{hero}} details!",
+        templateUrl: './app.component.html',
     }),
     __metadata("design:paramtypes", [])
 ], AppComponent);
