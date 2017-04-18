@@ -13,7 +13,7 @@ var AppComponent = (function () {
     function AppComponent() {
         this.name = 'Leon';
         this.title = 'Tour of Heroes';
-        this.hero = 'Windstorm';
+        this.hero = new Hero(1, 'Windstorm');
         this.heroes = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
     }
     return AppComponent;
@@ -26,4 +26,12 @@ AppComponent = __decorate([
     __metadata("design:paramtypes", [])
 ], AppComponent);
 exports.AppComponent = AppComponent;
+var Hero = (function () {
+    function Hero(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+    return Hero;
+}());
+exports.Hero = Hero;
 //# sourceMappingURL=app.component.js.map

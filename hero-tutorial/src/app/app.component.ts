@@ -5,15 +5,26 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
 })
 export class AppComponent {
-  name:string;
-  title:string;
-  hero:string;
-  heroes:Array<string>;
-  
-  constructor(){
+  name: string;
+  title: string;
+  hero: Hero;
+  heroes: Array<string>;
+
+  constructor() {
     this.name = 'Leon';
     this.title = 'Tour of Heroes';
-    this.hero = 'Windstorm';
+    this.hero = new Hero(1,'Windstorm');
     this.heroes = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
+  }
+}
+
+
+export class Hero {
+  public id: number;
+  public name: string;
+
+  constructor(id: number, name: string) {
+    this.id = id;
+    this.name = name;
   }
 }
