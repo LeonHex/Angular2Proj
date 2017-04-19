@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
 
-import { Hero } from './hero.js';
+import { Hero } from './hero';
 
 @Component({
   selector: 'my-app',
-  styleUrls: ['./dist/app/app.component.css'],
-  templateUrl: './dist/app/app.component.html',
+  styleUrls: ['./app.component.css'],
+  templateUrl: './app.component.html',
 })
 export class AppComponent {
   name: string;
