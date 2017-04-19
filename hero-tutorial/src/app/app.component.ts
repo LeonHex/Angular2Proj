@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+import { Hero } from './hero';
 
 @Component({
   selector: 'my-app',
@@ -31,16 +33,5 @@ export class AppComponent {
 
   onSelect(hero: Hero) {
     this.selectedHero = hero;
-  }
-}
-
-
-export class Hero {
-  public id: number;
-  public name: string;
-
-  constructor(id: number, name: string) {
-    this.id = id;
-    this.name = name;
   }
 }

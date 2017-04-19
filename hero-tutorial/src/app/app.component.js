@@ -40,12 +40,4 @@ AppComponent = __decorate([
     __metadata("design:paramtypes", [])
 ], AppComponent);
 exports.AppComponent = AppComponent;
-var Hero = (function () {
-    function Hero(id, name) {
-        this.id = id;
-        this.name = name;
-    }
-    return Hero;
-}());
-exports.Hero = Hero;
 //# sourceMappingURL=app.component.js.map
