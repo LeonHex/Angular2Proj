@@ -23,7 +23,8 @@ var AppComponent = (function () {
         this.selectedHero = hero;
     };
     AppComponent.prototype.getHeroes = function () {
-        this.heroes = this.heroService.getHeroes();
+        var _this = this;
+        this.heroService.getHeroesSlowly().then(function (heroes) { return _this.heroes = heroes; });
     };
     return AppComponent;
 }());
