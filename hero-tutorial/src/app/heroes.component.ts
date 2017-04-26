@@ -3,6 +3,8 @@ import { OnInit } from "@angular/core";
 import { Hero } from './hero';
 import { HeroService } from "./hero.service";
 
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'my-heroes',
   styleUrls: ['./heroes.component.css'],
@@ -14,7 +16,7 @@ export class HeroesComponent implements OnInit {
   heroes: Hero[];
 
 
-  constructor(private heroService: HeroService) {
+  constructor(private heroService: HeroService, private router: Router) {
     this.name = 'Leon';
   }
 
@@ -28,5 +30,9 @@ export class HeroesComponent implements OnInit {
 
   getHeroes(): void {
     this.heroService.getHeroesSlowly().then(heroes => this.heroes = heroes);
+  }
+
+  gotoDetail(): void {
+    this.router.navigate(['/detail', this.selectedHero.id]);
   }
 }
